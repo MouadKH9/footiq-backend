@@ -19,6 +19,8 @@ services:
     env_file: .env
     ports:
       - "${BACKEND_PORT:-8003}:${BACKEND_PORT:-8003}"
+    volumes:
+      - .:/app
     depends_on:
       db:
         condition: service_healthy
