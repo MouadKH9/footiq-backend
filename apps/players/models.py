@@ -21,7 +21,7 @@ def normalize_name(name):
 class Club(models.Model):
     id = models.IntegerField(primary_key=True, help_text="Transfermarkt club_id")
     name = models.CharField(max_length=255)
-    club_code = models.CharField(max_length=10, blank=True, default="")
+    club_code = models.CharField(max_length=255, blank=True, default="")
     domestic_competition_id = models.CharField(max_length=20, blank=True, default="")
     stadium_name = models.CharField(max_length=255, blank=True, default="")
     logo_url = models.URLField(max_length=500, blank=True, default="")
